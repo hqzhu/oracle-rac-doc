@@ -1,0 +1,10 @@
+# Do not remove the following line, or various programs
+# that require network functionality will fail.
+127.0.0.1		localhost.localdomain localhost
+166.111.141.31		node1.inetboss.com	node1
+166.111.141.32		node2.inetboss.com	node2
+192.168.1.31		node1-priv.inetboss.com	node1-priv
+192.168.1.32		node2-priv.inetboss.com	node2-priv
+166.111.141.41		node1-vip.inetboss.com		node1-vip
+166.111.141.42		node2-vip.inetboss.com		node2-vip
+166.111.141.43		node-cluster-scan.inetboss.com	node-cluster-scan
