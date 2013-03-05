@@ -1,0 +1,31 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+PATH=$PATH:$HOME/bin
+
+export PATH
+
+TMP=/tmp; export TMP
+TMPDIR=$TMP; export TMPDIR
+ORACLE_SID=+ASM2; export ORACLE_SID
+ORACLE_BASE=/oracle/app/grid; export ORACLE_BASE
+ORACLE_HOME=/oracle/app/11g/grid; export ORACLE_HOME
+NLS_DATE_FORMAT="yyyy-mm-dd HH24:MI:SS"; export NLS_DATE_FORMAT
+THREADS_FLAG=native; export THREADS_FLAG
+PATH=$ORACLE_HOME/bin:$PATH; export PATH
+
+if [ $USER = "oracle" ] || [ $USER = "grid" ]; then
+  if [ $USER = "/bin/ksh" ]; then
+    ulimit -p 16384
+    ulimit -n 65546
+  else
+    ulimit -u 16384 -n 65536
+  fi
+  umask 022
+fi
