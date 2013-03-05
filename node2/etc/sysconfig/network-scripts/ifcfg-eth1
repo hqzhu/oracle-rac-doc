@@ -1,0 +1,8 @@
+# Intel Corporation 82545EM Gigabit Ethernet Controller (Copper)
+DEVICE=eth1
+BOOTPROTO=static
+IPADDR=192.168.1.32
+NETMASK=255.255.255.0
+HWADDR=00:50:56:BC:1F:68
+ONBOOT=yes
+HOTPLUG=no
